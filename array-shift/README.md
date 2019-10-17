@@ -38,8 +38,7 @@ Write a function called insertShiftArray which takes in an array and the value t
 
 ---
 
-### Change Log
-***[The change log will list any changes made to the code base. This includes any changes from TA/Instructor feedback]***   
+### Change Log  
 1.1: First attempt at array shifting - 17Nov19  
 
 ---

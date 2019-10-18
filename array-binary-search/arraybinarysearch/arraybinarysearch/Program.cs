@@ -4,6 +4,12 @@ namespace arraybinarysearch
 {
     public class Program
     {
+        /// <summary>
+        /// Creates an array based upon the users input. The method takes the array and uses it to return a value of the searched key.
+        /// Help from : https://www.tutorialspoint.com/Binary-search-in-Chash
+        /// </summary>
+        /// <param name="args"></param>
+        /// <returns>the found key</returns>
         static int Main(string[] args)
         {
             Console.WriteLine("Please enter a number for the amount of numbers in the array:");

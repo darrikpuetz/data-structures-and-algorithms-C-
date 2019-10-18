@@ -4,20 +4,95 @@ namespace arraybinarysearch
 {
     public class Program
     {
-        static void Main(string[] args)
+        static int Main(string[] args)
         {
             Console.WriteLine("Please enter a number for the amount of numbers in the array:");
-            try
-            {
-                string input = Console.ReadLine();
-                int valueInput = int.Parse(input);
-            }
-            catch (Exception)
-            {
 
-                throw;
+            int input = Convert.ToInt32(Console.ReadLine());
+            int minNum = 0;
+            int maxNum = 10;
+            int[] newArr = new int[input];
+            Random randomNumbers = new Random();
+            for (int i = 0; i < input; i++)
+            {
+                newArr[i] = randomNumbers.Next(minNum, maxNum);
+                Console.WriteLine($"{newArr[i]}");
             }
+            Console.WriteLine("What number do you want to search for?");
+            int searchKey = Convert.ToInt32(Console.ReadLine());
+            Array.Sort(newArr);
+            int findMiddle = 0;
+            int low = 0;
+            int high = (newArr.Length) - 1;
+            int middle = (low + high) / 2;
+            while (low <= high)
+            {
+                middle = (low + high) / 2;
+                findMiddle = newArr[middle];
+                if (findMiddle == searchKey)
+                {
+                    Console.WriteLine($"Found: {searchKey} ");
+                    return findMiddle;
+                }
+                else
+                {
+                    if (findMiddle > searchKey)
+                    {
+                        high = findMiddle - 1;
+                    }
+                    else
+                    {
+                        low = findMiddle + 1;
+                    }
+                }
+
+            }
+            Console.WriteLine("That number was not found");
+            return -1;
+
         }
-        public static
+        public static int ReturnFound(int[] arr, int searchkey1)
+        {
+            int searchKey = searchkey1;
+            int input = arr.Length;
+            int minNum = 0;
+            int maxNum = 10;
+            int[] newArr = arr;
+            Random randomNumbers = new Random();
+            for (int i = 0; i < input; i++)
+            {
+                newArr[i] = randomNumbers.Next(minNum, maxNum);
+            }
+            Array.Sort(newArr);
+            int findMiddle = 0;
+            int low = 0;
+            int high = (newArr.Length) - 1;
+            int middle = (low + high) / 2;
+            while (low <= high)
+            {
+                middle = (low + high) / 2;
+                findMiddle = newArr[middle];
+                if (findMiddle == searchKey)
+                {
+                    Console.WriteLine($"Found: {searchKey} ");
+                    return findMiddle;
+                }
+                else
+                {
+                    if (findMiddle > searchKey)
+                    {
+                        high = findMiddle - 1;
+                    }
+                    else
+                    {
+                        low = findMiddle + 1;
+                    }
+                    return findMiddle;
+                }
+
+            }
+            Console.WriteLine("That number was not found");
+            return -1;
+        }
     }
 }

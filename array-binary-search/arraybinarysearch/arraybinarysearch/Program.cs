@@ -31,7 +31,7 @@ namespace arraybinarysearch
                 findMiddle = newArr[middle];
                 if (findMiddle == searchKey)
                 {
-                    Console.WriteLine($"Found: {searchKey} ");
+                    Console.WriteLine($"Found: {findMiddle} ");
                     return findMiddle;
                 }
                 else
@@ -54,27 +54,16 @@ namespace arraybinarysearch
         public static int ReturnFound(int[] arr, int searchkey1)
         {
             int searchKey = searchkey1;
-            int input = arr.Length;
-            int minNum = 0;
-            int maxNum = 10;
-            int[] newArr = arr;
-            Random randomNumbers = new Random();
-            for (int i = 0; i < input; i++)
-            {
-                newArr[i] = randomNumbers.Next(minNum, maxNum);
-            }
-            Array.Sort(newArr);
             int findMiddle = 0;
             int low = 0;
-            int high = (newArr.Length) - 1;
+            int high = (arr.Length) - 1;
             int middle = (low + high) / 2;
             while (low <= high)
             {
                 middle = (low + high) / 2;
-                findMiddle = newArr[middle];
+                findMiddle = arr[middle];
                 if (findMiddle == searchKey)
                 {
-                    Console.WriteLine($"Found: {searchKey} ");
                     return findMiddle;
                 }
                 else
@@ -91,7 +80,6 @@ namespace arraybinarysearch
                 }
 
             }
-            Console.WriteLine("That number was not found");
             return -1;
         }
     }

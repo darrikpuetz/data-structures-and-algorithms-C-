@@ -7,11 +7,15 @@
 
 ### Problem Domain
 
-Write a function called BinarySearch which takes in 2 parameters: a sorted array and the search key. Without utilizing any of the built-in methods available to your language, return the index of the array’s element that is equal to the search key, or -1 if the element does not exist.
+Write the following methods for the Linked List class:
+
+.append(value) which adds a new node with the given value to the end of the list
+.insertBefore(value, newVal) which add a new node with the given newValue immediately before the first value node
+.insertAfter(value, newVal) which add a new node with the given newValue immediately after the first value node
 
 ---
 ### Summary
-The method creates an array based upon the users input. The method takes the array and uses it to return a value of the searched key.
+These methods search a link list to find a place to insert, before, after, and in the middle of that linked list.
 
 ### Inputs and Expected Outputs
 
@@ -42,7 +46,7 @@ The method creates an array based upon the users input. The method takes the arr
 
 ### Change Log
 
-1.1: Original turn in for binary search- 18OCT2019 
+1.1: Original turn in for Linked List- 22OCT2019 
 
 ---
 

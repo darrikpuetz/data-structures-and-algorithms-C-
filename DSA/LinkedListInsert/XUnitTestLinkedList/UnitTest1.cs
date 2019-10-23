@@ -10,8 +10,13 @@ namespace XUnitTestLinkedList
         public void Append()
         {
             LinkList append = new LinkList();
-            append.Append(12);
-            Assert.True(append.Head.Value == 12);
+            append.Add(1);
+            append.Add(45);
+            append.Add(64);
+            append.Add(25);
+            append.Append(3);
+            bool worked = append.Worked(12);
+            Assert.False(worked);
         }
     }
 }

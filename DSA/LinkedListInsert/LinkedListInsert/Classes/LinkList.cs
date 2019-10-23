@@ -21,6 +21,12 @@ namespace LinkedListInsert.Classes
             Current.Next = node;
         }
 
+        public void Add(int value)
+        {
+            Node newNode = new Node(value);
+            newNode.Next = Head;
+            Head = newNode;
+        }
         public void InsertBefore(int value, int value2)
         {
             Current = Head;
@@ -71,6 +77,26 @@ namespace LinkedListInsert.Classes
                     node.Next = Current.Next;
                     Current.Next = node;
                     return;
+            }
+        }
+        public bool Worked(int value)
+        {
+            Current = Head;
+            while (Current.Next != null)
+            {
+                if (Current.Value == value)
+                {
+                    return true;
+                }
+                Current = Current.Next;
+            }
+            if (Current.Value == value)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
             }
         }
     }

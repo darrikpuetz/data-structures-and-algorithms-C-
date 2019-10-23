@@ -21,10 +21,10 @@ These methods search a link list to find a place to insert, before, after, and i
 
 ### Inputs and Expected Outputs
 
-| Input          | Expected Output       |
-| :-----------   | :-----------          |
-| [1,2,3,4,5], 5 | 5                     |
-| [1,2,3,4,5], 0 | Not Found             |
+| Input           | Expected Output     |
+| :-----------    | :-----------        |
+| [1,2,3,4], 5    | [1,2,3,4,5}         |
+| [1,2,3,4,5],0,5 | [1,2,3,4,0,5     |
 
 
 ---

@@ -35,7 +35,7 @@ The method creates an array based upon the users input. The method takes the arr
 
 
 ### Whiteboard Visual
-![Image 1](https://via.placeholder.com/750x500)
+![Image 1](https://github.com/darrikpuetz/data-structures-and-algorithms-C-DOTNET-/blob/master/assets/LinkListInsert.jpg)
 
 
 ---

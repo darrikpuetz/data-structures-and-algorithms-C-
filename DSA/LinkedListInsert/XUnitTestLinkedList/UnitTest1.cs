@@ -32,6 +32,7 @@ namespace XUnitTestLinkedList
             bool worked = append.Worked(12);
             Assert.False(worked);
         }
+
         [Fact]
         public void AddBefore()
         {
@@ -45,6 +46,7 @@ namespace XUnitTestLinkedList
             bool worked = append.Worked(7);
             Assert.True(worked);
         }
+
         [Fact]
         public void AddAfter()
         {
@@ -58,6 +60,7 @@ namespace XUnitTestLinkedList
             bool worked = append.Worked(7);
             Assert.True(worked);
         }
+
         [Fact]
         public void AddLast()
         {
@@ -69,5 +72,71 @@ namespace XUnitTestLinkedList
             bool worked = append.Worked(5);
             Assert.True(worked);
         }
+
+        [Fact]
+        public void FromEndHappyTest()
+        {
+
+            LinkList append = new LinkList();
+            append.Add(1);
+            append.Add(2);
+            append.Add(3);
+            append.Add(4);
+            append.Add(5);
+            int k = append.FromEnd(2);
+            Assert.Equal(3, k);
+        }
+
+        [Fact]
+        public void FromEndKGreaterThan()
+        {
+
+            LinkList append = new LinkList();
+            append.Add(1);
+            append.Add(2);
+            append.Add(3);
+            append.Add(4);
+            append.Add(5);
+            Assert.Throws<ArgumentOutOfRangeException>(() => append.FromEnd(6));
+        }
+
+        [Fact]
+        public void FromEndKIsSame()
+        {
+
+            LinkList append = new LinkList();
+            append.Add(1);
+            append.Add(2);
+            append.Add(3);
+            append.Add(4);
+            append.Add(5);
+            int k = append.FromEnd(4);
+            Assert.Equal(append.Head.Value, k);
+        }
+
+        [Fact]
+        public void FromEndKNotPos()
+        {
+
+            LinkList append = new LinkList();
+            append.Add(1);
+            append.Add(2);
+            append.Add(3);
+            append.Add(4);
+            append.Add(5);
+            Assert.Throws<ArgumentOutOfRangeException>(() => append.FromEnd(-2));
+        }
+
+        [Fact]
+        public void FromEndKisNotEnd()
+        {
+
+            LinkList append = new LinkList();
+            append.Add(15);
+            int k = append.FromEnd(0);
+            Assert.Equal(append.Head.Value, k);
+        }
+
+
     }
 }

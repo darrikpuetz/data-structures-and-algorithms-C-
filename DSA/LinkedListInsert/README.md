@@ -13,10 +13,13 @@ Write the following methods for the Linked List class:
 1. .append(value) which adds a new node with the given value to the end of the list
 2. .insertBefore(value, newVal) which add a new node with the given newValue immediately before the first value node
 3. .insertAfter(value, newVal) which add a new node with the given newValue immediately after the first value node
+4. Write a method for the Linked List class which takes a number, k, as a parameter. Return the node’s value that is k from the end of the linked list. 
+You have access to the Node class and all the properties on the Linked List class as well as the methods created in previous challenges.
+
 
 ---
 ### Summary
-These methods modify a linked list added values to the head. You can insert them at the end, beginning, and anywehre else.
+These methods modify a linked list added values to the head. You can insert them at the end, beginning, and anywehre else. On the second day we added a method that tracks the end of the node from where its located at.
 
 ### Inputs and Expected Outputs
 

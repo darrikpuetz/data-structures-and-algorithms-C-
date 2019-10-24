@@ -1,24 +1,28 @@
-# Array Shift
+# Linked List Insertion
 
-## Perfect Sequence
+
 *Author: Darrik Puetz*
 
 ---
 
 ### Problem Domain
 
-Write a function called BinarySearch which takes in 2 parameters: a sorted array and the search key. Without utilizing any of the built-in methods available to your language, return the index of the array’s element that is equal to the search key, or -1 if the element does not exist.
+Write the following methods for the Linked List class:
+
+1. .append(value) which adds a new node with the given value to the end of the list
+2. .insertBefore(value, newVal) which add a new node with the given newValue immediately before the first value node
+3. .insertAfter(value, newVal) which add a new node with the given newValue immediately after the first value node
 
 ---
 ### Summary
-The method creates an array based upon the users input. The method takes the array and uses it to return a value of the searched key.
+These methods modify a linked list added values to the head. You can insert them at the end, beginning, and anywehre else.
 
 ### Inputs and Expected Outputs
 
-| Input          | Expected Output       |
-| :-----------   | :-----------          |
-| [1,2,3,4,5], 5 | 5                     |
-| [1,2,3,4,5], 0 | Not Found             |
+| Input             | Expected Output       |
+| :-----------      | :-----------          |
+| [1,2,3,4], 5      | [1,2,3,4,5]           |
+| [1,2,3,4,5], 0, 5 |[1,2,3,4,0,5]          |
 
 
 ---
@@ -42,7 +46,7 @@ The method creates an array based upon the users input. The method takes the arr
 
 ### Change Log
 
-1.1: Original turn in for binary search- 18OCT2019 
+1.1: Original turn in for Linked List Insertion- 22OCT2019 
 
 ---
 

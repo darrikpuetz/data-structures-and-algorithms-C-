@@ -69,5 +69,48 @@ namespace XUnitTestLinkedList
             bool worked = append.Worked(5);
             Assert.True(worked);
         }
+
+        [Fact]
+
+        public void Merge()
+        {
+            LinkList listOne = new LinkList();
+            Node nodeOne = new Node(1);
+            Node nodeTwo = new Node(2);
+            listOne.Head = nodeOne;
+            nodeOne.Next = nodeTwo;
+            LinkList listTwo = new LinkList();
+            Node nodeEleven = new Node(11);
+            Node nodeTwelve = new Node(12);
+            Node nodeThirteen = new Node(13);
+            listTwo.Head = nodeEleven;
+            nodeEleven.Next = nodeTwelve;
+            nodeTwelve.Next = nodeTwelve;
+            nodeThirteen.Next = nodeThirteen;
+            listOne.Merge(listOne, listTwo);
+            Assert.Equal(2, nodeEleven.Next.Value);
+
+        }
+
+        [Fact]
+
+        public void NotMerge()
+        {
+            LinkList listOne = new LinkList();
+            Node nodeOne = new Node(-1);
+            Node nodeTwo = new Node(2);
+            listOne.Head = nodeOne;
+            nodeOne.Next = nodeTwo;
+            LinkList listTwo = new LinkList();
+            Node nodeEleven = new Node(11);
+            Node nodeTwelve = new Node(12);
+            Node nodeThirteen = new Node(13);
+            listTwo.Head = nodeEleven;
+            nodeEleven.Next = nodeTwelve;
+            nodeTwelve.Next = nodeTwelve;
+            nodeThirteen.Next = nodeThirteen;
+            Assert.NotNull(listOne.Merge(listOne, listTwo));
+
+        }
     }
 }

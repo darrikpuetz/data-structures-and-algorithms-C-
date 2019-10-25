@@ -99,6 +99,37 @@ namespace LinkedListInsert.Classes
                 return false;
             }
         }
+
+        public Node Merge(LinkList listOne, LinkList listTwo)
+        {
+            Node firstNode = listOne.Head;
+            Node secondNode = listTwo.Head;
+            Node tailOne = null;
+            Node tailTwo = null;
+
+            while (firstNode != null && secondNode != null)
+            {
+                tailOne = firstNode.Next;
+                firstNode.Next = secondNode;
+                if (tailOne == null)
+                {
+                    break;
+                }
+                tailTwo = secondNode;
+                secondNode.Next = tailOne;
+                firstNode = tailOne;
+                secondNode = tailTwo;
+            }
+            if (listOne.Head == null)
+            {
+                return listOne.Head;
+            }
+            else
+            {
+                return listTwo.Head;
+            }
+
+        }
     }
 
 }

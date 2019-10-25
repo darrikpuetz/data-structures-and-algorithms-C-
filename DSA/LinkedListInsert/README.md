@@ -57,11 +57,11 @@ You have access to the Node class and all the properties on the Linked List clas
 
 
 ### Whiteboard Visual
-![Image 1](https://github.com/darrikpuetz/data-structures-and-algorithms-C-DOTNET-/blob/master/assets/LinkListInsert.jpg)
+![Image 1](https://github.com/darrikpuetz/data-structures-and-algorithms-C-DOTNET-/blob/master/assets/LinkListInsert.jpg)</br>
 
-![Image 1](https://github.com/darrikpuetz/data-structures-and-algorithms-C-DOTNET-/blob/master/assets/LinkListInsert.jpg)
-
-![Image 1](https://github.com/darrikpuetz/data-structures-and-algorithms-C-DOTNET-/blob/master/assets/LinkListWB2.jpg)
+![Image 1](https://github.com/darrikpuetz/data-structures-and-algorithms-C-DOTNET-/blob/master/assets/LinkListWB2.jpg)</br>
+Merge</br>
+![Image 1](https://github.com/darrikpuetz/data-structures-and-algorithms-C-DOTNET-/blob/master/assets/LinkListMerge.jpg)
 
 
 

@@ -77,7 +77,7 @@ Code Challenge 5
 
 ### Change Log
 
-
+1.3: Turn in for Code Challenge 5- 27OCT2019 
 1.2: Turn in for Merge Linked List- 25OCT2019 
 1.1: Original turn in for Linked List- 22OCT2019 
 

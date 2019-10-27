@@ -74,7 +74,6 @@ namespace XUnitTestLinkedList
         }
 
         [Fact]
-
         public void Merge()
         {
             LinkList listOne = new LinkList();
@@ -115,67 +114,71 @@ namespace XUnitTestLinkedList
             Assert.NotNull(listOne.Merge(listOne, listTwo));
 
         }
-
+      
         [Fact]
-
-        public void EmptyList()
+      
+        public void FromEndHappyTest()
         {
-            LinkList newlist = new LinkList();
-            Assert.NotNull(newlist);
+
+            LinkList append = new LinkList();
+            append.Add(1);
+            append.Add(2);
+            append.Add(3);
+            append.Add(4);
+            append.Add(5);
+            int k = append.FromEnd(2);
+            Assert.Equal(3, k);
         }
 
         [Fact]
-
-        public void Insert()
+        public void FromEndKGreaterThan()
         {
-            LinkList newlist = new LinkList();
-            newlist.Insert(4);
-            Assert.Equal(4, newlist.Head.Value);
+
+            LinkList append = new LinkList();
+            append.Add(1);
+            append.Add(2);
+            append.Add(3);
+            append.Add(4);
+            append.Add(5);
+            Assert.Throws<ArgumentOutOfRangeException>(() => append.FromEnd(6));
         }
 
         [Fact]
-
-        public void FirstNode()
+        public void FromEndKIsSame()
         {
-            LinkList newlist = new LinkList();
-            newlist.Insert(4);
-            newlist.Insert(64);
-            Assert.Equal(4, newlist.Head.Value);
+
+            LinkList append = new LinkList();
+            append.Add(1);
+            append.Add(2);
+            append.Add(3);
+            append.Add(4);
+            append.Add(5);
+            int k = append.FromEnd(4);
+            Assert.Equal(append.Head.Value, k);
         }
 
         [Fact]
-
-        public void InsertMore()
+        public void FromEndKNotPos()
         {
-            LinkList newlist = new LinkList();
-            newlist.Insert(4);
-            newlist.Insert(64);
-            newlist.Insert(13);
-            Assert.NotNull(newlist.Head.Next);
+
+            LinkList append = new LinkList();
+            append.Add(1);
+            append.Add(2);
+            append.Add(3);
+            append.Add(4);
+            append.Add(5);
+            Assert.Throws<ArgumentOutOfRangeException>(() => append.FromEnd(-2));
         }
 
         [Fact]
-
-        public void NewValueExist()
+        public void FromEndKisNotEnd()
         {
-            LinkList newlist = new LinkList();
-            newlist.Insert(4);
-            newlist.Insert(64);
-            newlist.Insert(13);
-            Assert.True(newlist.Includes(4));
+
+            LinkList append = new LinkList();
+            append.Add(15);
+            int k = append.FromEnd(0);
+            Assert.Equal(append.Head.Value, k);
         }
 
-        [Fact]
-
-        public void ReturnABunchOfValues()
-        {
-            LinkList newlist = new LinkList();
-            newlist.Insert(4);
-            newlist.Insert(64);
-            newlist.Insert(13);
-            newlist.Insert(5);
-            newlist.Insert(54);
-            Assert.Equal("54 , 5 , 13 , 64 , 4",newlist.ToString());
-        }
     }
 }

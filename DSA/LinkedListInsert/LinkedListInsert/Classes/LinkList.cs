@@ -9,6 +9,32 @@ namespace LinkedListInsert.Classes
         public Node Head { get; set; }
         public Node Current { get; set; }
 
+        public int FromEnd(int k)
+        {
+            if (k < 0)
+            {
+                throw new ArgumentOutOfRangeException("k is too low");
+            }
+                int counter = 0;
+                Current = Head;
+            while (Current.Next != null)
+            {
+                counter++;
+                Current = Current.Next;
+            }
+            if (k > counter)
+            {
+                throw new ArgumentOutOfRangeException("k is too high");
+            }
+                Current = Head;
+            while (k < counter)
+            {
+                counter--;
+                Current = Current.Next;
+            }
+            return Current.Value;
+        }
+
 
         public void Append(int value)
         {

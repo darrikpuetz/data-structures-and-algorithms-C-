@@ -180,5 +180,66 @@ namespace XUnitTestLinkedList
             Assert.Equal(append.Head.Value, k);
         }
 
+        [Fact]
+
+        public void EmptyList()
+        {
+            LinkList newlist = new LinkList();
+            Assert.NotNull(newlist);
+        }
+
+        [Fact]
+
+        public void Insert()
+        {
+            LinkList newlist = new LinkList();
+            newlist.Insert(4);
+            Assert.Equal(4, newlist.Head.Value);
+        }
+
+        [Fact]
+
+        public void FirstNode()
+        {
+            LinkList newlist = new LinkList();
+            newlist.Insert(4);
+            Assert.Equal(4, newlist.Head.Value);
+        }
+
+        [Fact]
+
+        public void InsertMore()
+        {
+            LinkList newlist = new LinkList();
+            newlist.Insert(4);
+            newlist.Insert(64);
+            newlist.Insert(13);
+            Assert.NotNull(newlist.Head.Next);
+        }
+
+        [Fact]
+
+        public void NewValueExist()
+        {
+            LinkList newlist = new LinkList();
+            newlist.Insert(4);
+            newlist.Insert(64);
+            newlist.Insert(13);
+            Assert.True(newlist.Includes(4));
+        }
+
+        [Fact]
+
+        public void ReturnABunchOfValues()
+        {
+            LinkList newlist = new LinkList();
+            newlist.Insert(4);
+            newlist.Insert(64);
+            newlist.Insert(13);
+            newlist.Insert(5);
+            newlist.Insert(54);
+            Assert.Equal("54 , 5 , 13 , 64 , 4", newlist.ToString());
+        }
+
     }
 }

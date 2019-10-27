@@ -20,6 +20,44 @@ namespace LinkedListInsert.Classes
             Node node = new Node(value);
             Current.Next = node;
         }
+        public string ToString(int value)
+        {
+            StringBuilder toString = new StringBuilder();
+            Current = Head;
+            while (Current != null)
+            {
+                toString.Append(Current.Value);
+                if (Current.Next != null)
+                {
+                    toString.Append(" , ");
+                    Current = Current.Next;
+                }
+            }
+            return toString.ToString();
+        }
+        public void Insert(int value)
+        {
+            Node node = new Node(value) { Next = Head };
+            Head = node;
+        }
+        public bool Includes(int value)
+        {
+            Current = Head;
+            while (Current.Next != null)
+            {
+                Current = Current.Next;
+            }
+            if (Current.Value == value)
+            {
+                return true;
+            }
+            else
+            {
+                Current = Current.Next;
+            }
+            return false;
+        }
+
 
         public void Add(int value)
         {
@@ -67,16 +105,16 @@ namespace LinkedListInsert.Classes
                     Node node = new Node(value2);
                     node.Next = Current.Next;
                     Current.Next = node;
-                    return;                    
+                    return;
                 }
                 Current = Current.Next;
             }
             if (Current.Value == value)
             {
-                    Node node = new Node(value2);
-                    node.Next = Current.Next;
-                    Current.Next = node;
-                    return;
+                Node node = new Node(value2);
+                node.Next = Current.Next;
+                Current.Next = node;
+                return;
             }
         }
         public bool Worked(int value)

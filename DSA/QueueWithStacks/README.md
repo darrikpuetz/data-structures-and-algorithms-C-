@@ -38,7 +38,7 @@ Dequeue Method takes a value out of the stack thats on the top. Enqueue inserts 
 
 
 ### Whiteboard Visual
-![Image 1](https://via.placeholder.com/750x500)
+![Image 1](https://github.com/darrikpuetz/data-structures-and-algorithms-C-DOTNET-/blob/master/assets/StackQueue.jpg)
 
 
 ---
